@@ -44,9 +44,9 @@ $(function() {
 
 <div id="kkfooter">
     <div id="contact-info" class="footer-area narrow">
-    	KonaKart<br />
-		020 7946 0000<br />
-		<a href ="#">info@konakart.com</a>
+    	WineXpress<br />
+		+65 02079 46000<br />
+		<a href ="#">info@winexpress.com</a>
     </div>
    	<div id="newsletter" class="footer-area wide">
    		<kk:msg  key="footer.subscribe"/><br />

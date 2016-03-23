@@ -98,6 +98,7 @@ function getURL(action, parmArray) {
 				url = url + add;
 			}		
 		}
+              
 		return url;		
 	} else {
 		var url = action;
@@ -115,6 +116,7 @@ function getURL(action, parmArray) {
 				url = url + add;
 			}		
 		}
+           
 		return url;
 	}
 }

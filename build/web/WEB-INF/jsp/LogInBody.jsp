@@ -21,7 +21,7 @@
 <% com.konakart.al.KKAppEng kkEng = (com.konakart.al.KKAppEng) session.getAttribute("konakartKey");  %>
 <% com.konakart.al.CustomerMgr customerMgr = kkEng.getCustomerMgr();%>
 <% com.konakart.appif.CustomerIf currentCustomer = customerMgr.getCurrentCustomer();%>
-<% boolean allowFacebook = kkEng.getConfigAsBoolean("MODULE_OTHER_FACEBOOK_LOGIN_STATUS",false,false);%>
+<% boolean allowFacebook = kkEng.getConfigAsBoolean("MODULE_OTHER_FACEBOOK_LOGIN_STATUS",true, true);%>
 <% boolean allowGooglePlus = kkEng.getConfigAsBoolean("MODULE_OTHER_GOOGLEPLUS_LOGIN_STATUS",false,false);%>
 
 <%if (allowGooglePlus) {%>
@@ -34,7 +34,7 @@
 <%if (allowFacebook) {%>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '<%=kkEng.getConfig("MODULE_OTHER_FACEBOOK_APP_ID")%>',
+      appId      : '162344054149990',
       version    : 'v2.5'
     });
     $("#fb-button").css("display","inline");
