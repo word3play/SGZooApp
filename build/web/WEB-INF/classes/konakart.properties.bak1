@@ -7,7 +7,11 @@
 
 # -----------------------------------------------------------------------------------
 #  D A T A B A S E   P R O P E R T I E S
+<<<<<<< HEAD
 #  Database Connection Parameters Set by Installer on 26-Feb-2016
+=======
+#  Database Connection Parameters Set by Installer on 25-Mar-2016
+>>>>>>> refs/remotes/origin/master
 # -----------------------------------------------------------------------------------
 
 torque.applicationRoot = .
@@ -21,11 +25,19 @@ torque.dsfactory.store1.connection.user     = admin
 torque.dsfactory.store1.connection.password = adminadmin
 
 # Enterprise Feature
+<<<<<<< HEAD
 #torque.database.kkstats.adapter              = mysql
 #torque.dsfactory.kkstats.connection.driver   = com.mysql.jdbc.Driver
 #torque.dsfactory.kkstats.connection.url      = jdbc:mysql://mysql-winexpress.cfjtroajn0p0.ap-southeast-1.rds.amazonaws.com:3306/WineXpressDB?zeroDateTimeBehavior=convertToNull
 #torque.dsfactory.kkstats.connection.user     = admin
 #torque.dsfactory.kkstats.connection.password = adminadmin
+=======
+torque.database.kkstats.adapter              = mysql
+torque.dsfactory.kkstats.connection.driver   = com.mysql.jdbc.Driver
+torque.dsfactory.kkstats.connection.url      = jdbc:mysql://mysql-winexpress.cfjtroajn0p0.ap-southeast-1.rds.amazonaws.com:3306/WineXpressDB?zeroDateTimeBehavior=convertToNull
+torque.dsfactory.kkstats.connection.user     = admin
+torque.dsfactory.kkstats.connection.password = adminadmin
+>>>>>>> refs/remotes/origin/master
 
 # Enterprise Feature
 #torque.database.store2.adapter              = mysql
@@ -75,21 +87,33 @@ torque.dsfactory.store1.connection.password = adminadmin
 # Using commons-dbcp 
 
 torque.dsfactory.store1.factory=org.apache.torque.dsfactory.SharedPoolDataSourceFactory
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.factory=org.apache.torque.dsfactory.SharedPoolDataSourceFactory
+=======
+torque.dsfactory.kkstats.factory=org.apache.torque.dsfactory.SharedPoolDataSourceFactory
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.factory=org.apache.torque.dsfactory.SharedPoolDataSourceFactory
 
 # The maximum number of active connections that can be allocated from this pool at 
 # the same time, or zero for no limit.
 
 torque.dsfactory.store1.pool.maxActive=30
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.pool.maxActive=30
+=======
+torque.dsfactory.kkstats.pool.maxActive=30
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.pool.maxActive=30
 
 # The maximum number of active connections that can remain idle in the pool, without 
 # extra ones being released, or zero for no limit. 
 
 torque.dsfactory.store1.pool.maxIdle=10
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.pool.maxIdle=10
+=======
+torque.dsfactory.kkstats.pool.maxIdle=10
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.pool.maxIdle=10
 
 # The maximum number of milliseconds that the pool will wait (when there are no 
@@ -97,7 +121,11 @@ torque.dsfactory.store1.pool.maxIdle=10
 # or -1 to wait indefinitely. 
 
 torque.dsfactory.store1.pool.maxWait=-1
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.pool.maxWait=-1
+=======
+torque.dsfactory.kkstats.pool.maxWait=-1
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.pool.maxWait=-1
 
 # The indication of whether objects will be validated before being borrowed from the
@@ -105,7 +133,11 @@ torque.dsfactory.store1.pool.maxWait=-1
 # attempt to borrow another. 
 
 torque.dsfactory.store1.pool.testOnBorrow=true
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.pool.testOnBorrow=true
+=======
+torque.dsfactory.kkstats.pool.testOnBorrow=true
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.pool.testOnBorrow=true
 
 # The SQL query that will be used to validate connections from this pool before 
@@ -117,7 +149,11 @@ torque.dsfactory.store1.pool.testOnBorrow=true
 # for DB2                     use: SELECT 1 FROM sysibm.sysdummy1
 
 torque.dsfactory.store1.pool.validationQuery=SELECT 1
+<<<<<<< HEAD
 #torque.dsfactory.kkstats.pool.validationQuery=SELECT 1
+=======
+torque.dsfactory.kkstats.pool.validationQuery=SELECT 1
+>>>>>>> refs/remotes/origin/master
 #torque.dsfactory.store2.pool.validationQuery=SELECT 1
 
 # -----------------------------------------------------------------------------------
