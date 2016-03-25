@@ -42,11 +42,11 @@
 	<%if (banner == null) { %>
 		<% banner = new Content();%>
 		<% banner.setDescription(new ContentDescription());%>
-		<% banner.getDescription().setName1("home_kindle-fire-hd.jpg");%>
-		<% banner.getDescription().setName2("home_kindle-fire-hd-medium.jpg");%>
-		<% banner.getDescription().setName3("home_kindle-fire-hd-small.jpg");%>
-		<% banner.getDescription().setTitle("Kindle fire");%>
-		<% banner.setClickUrl("SelectProd.action?prodId=34");%>
+		<% banner.getDescription().setName1("front_banner.jpg");%>
+		<% banner.getDescription().setName2("front_banner_med.jpg");%>
+		<% banner.getDescription().setName3("front_banner_small.jpg");%>
+		<% banner.getDescription().setTitle("Front Banner");%>
+		<% banner.setClickUrl("ShowSpecials.action");%>
 	<% } %> 
 
 	<div id="slideshow"  class="rounded-corners" >
@@ -89,29 +89,29 @@
 	<%if (banner1 == null) { %>
 		<% banner1 = new Content();%>
 		<% banner1.setDescription(new ContentDescription());%>
-		<% banner1.getDescription().setName1("home_electronics-sale.jpg");%>
+		<% banner1.getDescription().setName1("mini_banner_1.jpg");%>
 		<% banner1.setClickUrl("ShowSpecials.action");%>
 	<% } %> 
 	
 	<%if (banner2 == null) { %>
 		<% banner2 = new Content();%>
 		<% banner2.setDescription(new ContentDescription());%>
-		<% banner2.getDescription().setName1("home_electronics-sale-2.jpg");%>
-		<% banner2.setClickUrl("SelectCat.action?catId=23");%>
+		<% banner2.getDescription().setName1("mini_banner_2.jpg");%>
+		<% banner2.setClickUrl("SelectCat.action?catId=32");%>
 	<% } %> 
 	
 	<%if (banner3 == null) { %>
 		<% banner3 = new Content();%>
 		<% banner3.setDescription(new ContentDescription());%>
-		<% banner3.getDescription().setName1("home_gifts-for-the-home.jpg");%>
-		<% banner3.setClickUrl("SelectCat.action?catId=24");%>
+		<% banner3.getDescription().setName1("mini_banner_3.jpg");%>
+		<% banner3.setClickUrl("SelectCat.action?catId=32");%>
 	<% } %> 
 	
 	<%if (banner4 == null) { %>
 		<% banner4 = new Content();%>
 		<% banner4.setDescription(new ContentDescription());%>
-		<% banner4.getDescription().setName1("home_iphone-5.jpg");%>
-		<% banner4.setClickUrl("SelectProd.action?prodId=35");%>
+		<% banner4.getDescription().setName1("mini_banner_4.jpg");%>
+		<% banner4.setClickUrl("SelectProd.action?prodId=32");%>
 	<% } %> 
 	
 	<div id="banners">

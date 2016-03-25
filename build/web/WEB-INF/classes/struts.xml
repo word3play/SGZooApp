@@ -216,6 +216,20 @@
 			<interceptor-ref name="allowCacheStack"></interceptor-ref>			
 			<result name="success" type="tiles">catalog.contactus.page</result>
 		</action>
+                <action name="SendEmail" class="com.konakart.actions.SendEmailAction">
+                        <!-- SMTP configuration -->
+                        <param name="host">smtp.gmail.com</param>
+                        <param name="port">587</param>
+                        <param name="username">noreplywine@gmail.com</param>
+                        <param name="password">xiaoZOO!</param>
+                        <param name="toAddr">winexpress16@gmail.com</param>
+                        <!-- End of SMTP configuration -->
+                    
+                        <interceptor-ref name="allowCacheStack">
+                            <param name="fileUpload.maximumSize">10485760</param>
+                        </interceptor-ref>			
+			<result name="success" type="tiles">catalog.contactus.cfm</result>
+		</action>
 		<action name="CreateGiftRegistry" class="com.konakart.actions.CreateGiftRegistryAction">
 			<result name="success" type="tiles">catalog.create.gift.registry.page</result>
 		</action>

@@ -20,16 +20,40 @@
 
 <% com.konakart.al.KKAppEng kkEng = (com.konakart.al.KKAppEng) session.getAttribute("konakartKey");  %>
 
-				<s:set scope="request" var="contactUsContent" value="contactUsContent"/> 
-				<%String contactUsContent = (String)(request.getAttribute("contactUsContent")); %>
- 				<h1 id="page-title"><kk:msg  key="header.contact.us"/></h1>			
-	    		<div class="content-area rounded-corners">
-		    		<div id="about-us">
-		    			<%=contactUsContent%>
-						<div class="form-buttons-wide">
-							<a href="Welcome.action" id="continue-button" class="button small-rounded-corners"><span><kk:msg  key="common.close"/></span></a>
-						</div>
-			    	</div>
-	    		</div>
-
+<s:set scope="request" var="contactUsContent" value="contactUsContent"/> 
+<%String contactUsContent = (String) (request.getAttribute("contactUsContent"));%>
+<h1 id="page-title"><kk:msg  key="header.contact.us"/></h1>			
+<div class="content-area rounded-corners">
+    <div id="about-us">
+        <s:form action="SendEmail.action" method="post" theme="simple" enctype="multipart/form-data">
+            <div class="form-section">
+                <div class="form-section-fields">
+                    <div class="form-input">
+                        <label style="width:10%">Your Email: </label>
+                        <input type="text" name="from"/>
+                    </div>
+                    <div class="form-input">
+                        <label style="width:10%">Subject: </label>
+                        <input type="text" name="subject"/>
+                    </div>
+                    <div class="form-input">
+                        <label style="width:10%">Enquiry: </label>
+                        <textarea rows="7" cols="38" style="font-family: Arial" name="body"></textarea>
+                    </div>
+                    <br/><br/>
+                    <div align="left" class="form-input" >
+                        <label style="width:10%">Attachments: </label>
+                        <s:file name="upload"/>
+                    </div>
+                    <div align = "left" class="form-buttons">
+                        <s:submit cssClass="button small-rounded-corners" value="Submit" />
+                    </div>
+                </div>
+            </div>
+        </s:form>
+        <div class="form-buttons-wide">
+            <a href="Welcome.action" id="continue-button" class="button small-rounded-corners"><span><kk:msg  key="common.close"/></span></a>
+        </div>
+    </div>
+</div>
 

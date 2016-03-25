@@ -263,6 +263,10 @@
 		<put-attribute name="defName" value="catalog.contactus.page"/>
 		<put-attribute name="body1" value="/WEB-INF/jsp/ContactUsBody.jsp"/>
 	</definition>
+        <definition name="catalog.contactus.cfm" extends="main.layout">
+		<put-attribute name="defName" value="catalog.contactus.cfm"/>
+		<put-attribute name="body1" value="/WEB-INF/jsp/SendEmail.jsp"/>
+	</definition>
 	<!-- Exception Page -->
 	<definition name="exception.summary.page" extends="main.layout">
 		<put-attribute name="defName" value="exception.summary.page"/>
