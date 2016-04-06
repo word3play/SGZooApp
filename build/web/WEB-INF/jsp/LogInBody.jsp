@@ -21,8 +21,8 @@
 <% com.konakart.al.KKAppEng kkEng = (com.konakart.al.KKAppEng) session.getAttribute("konakartKey");  %>
 <% com.konakart.al.CustomerMgr customerMgr = kkEng.getCustomerMgr();%>
 <% com.konakart.appif.CustomerIf currentCustomer = customerMgr.getCurrentCustomer();%>
-<% boolean allowFacebook = kkEng.getConfigAsBoolean("MODULE_OTHER_FACEBOOK_LOGIN_STATUS",false,false);%>
-<% boolean allowGooglePlus = kkEng.getConfigAsBoolean("MODULE_OTHER_GOOGLEPLUS_LOGIN_STATUS",false,false);%>
+<% boolean allowFacebook = kkEng.getConfigAsBoolean("MODULE_OTHER_FACEBOOK_LOGIN_STATUS",false,true);%>
+<% boolean allowGooglePlus = kkEng.getConfigAsBoolean("MODULE_OTHER_GOOGLEPLUS_LOGIN_STATUS",false,true);%>
 
 <%if (allowGooglePlus) {%>
 	<script src="https://apis.google.com/js/client:platform.js?onload=gpStart" async defer></script>
