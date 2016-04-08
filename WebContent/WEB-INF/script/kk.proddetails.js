@@ -141,7 +141,7 @@ function getImage(combinedCode) {
 	var uuid = document.getElementById('gallery_nav_uuid').value;
 	var imgNamesStr = document.getElementById('gallery_img_names').value;	
 	var imgNames = imgNamesStr.split(",");
-	
+        
 	var smacount = 0;
 	var smallRegExp =  new RegExp("^.*" + uuid + "_" + combinedCode + "\\d+" + "_small" + ".*$");
 	var bigRegExp =  new RegExp("^.*" + uuid + "_" + combinedCode + "\\d+" + "_big" + ".*$");
@@ -153,17 +153,19 @@ function getImage(combinedCode) {
 		if (smallRegExp.test(name)) {
 			var num = getImgNumberFromName(name);
 			smallNames[num] = name;
+                        bigNames[num] = name.substr(0, name.length-7) + "big.jpg";
 		}else if (bigRegExp.test(name)) {
 			var num = getImgNumberFromName(name);
+                        smallNames[num] = name.substr(0, name.length-7) + "small.jpg";
 			bigNames[num] = name;
 			numImgs++;
 		}
 	}
 	
-	if (smallNames.length == 0 || bigNames.length == 0) {
-		getImage("");
-		return;
-	}
+//	if (smallNames.length == 0 || bigNames.length == 0) {
+//		getImage("");
+//		return;
+//	}
 	
 	var processed = 0;
 	var galleryNav = $("#gallery_nav");
