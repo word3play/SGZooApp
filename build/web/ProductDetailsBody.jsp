@@ -29,7 +29,7 @@
 <% String sortBy = revMgr.getDataDesc().getOrderBy();%>
 <% String title = "";%>
 
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <%if (!kkEng.isPortlet()){%>
 	<script type="text/javascript" src="<%=kkEng.getScriptBase()%>/kk.proddetails.js"></script>	
 <% } %>
@@ -62,7 +62,7 @@
 					<%kkEng.setCustomTemp1("small"); %>
 					<tiles:insertAttribute name="pdInclude" /> 
 				</div>
-				<div id="share-this-mobile" class="rounded-corners-bottom">
+				<div id="share-this-mobile" class="rounded-corners-bottom">2
     				<span id="share-this-label"><kk:msg  key="product.details.body.share.this"/>:</span>
     				<!-- AddThis Button BEGIN -->
 					<div class="addthis_toolbox addthis_default_style addthis_32x32_style">

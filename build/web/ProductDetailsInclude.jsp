@@ -68,7 +68,7 @@ $(function() {
 							<%//}%>
 -->
 
-                                                        <%String names = prod.getImage(); out.println(names);%>
+                                                        <%String names = prod.getImage();%>
 							<input type="hidden" id="gallery_img_names" value="<%=names%>" type="hidden"/>	
 						<%//}%>
 													

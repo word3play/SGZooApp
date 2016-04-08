@@ -50,7 +50,7 @@
 				    							<td class="narrow-col">#<%=order.getId()%></td>
 				    							<td class="narrow-col"><%=kkEng.getDateAsString(order.getDatePurchased())%></td>
 				    							<td class="narrow-col"><kk:msg  key="common.total"/>: <%=kkEng.formatPrice(order.getTotalIncTax(),order.getCurrencyCode())%></td>
-				    							<td class="status-col"><div class="label <%=statusClass%>"><%=order.getStatusText()%></div></td>
+				    							<td class="status-col"><div class="label <%=statusClass%>"><%=(order.getStatusText().equalsIgnoreCase("Waiting for Payment"))?"Payment Received":order.getStatusText()%></div></td>
 				    							<td class="narrow-col"><a class="text-link" href='<%="ShowOrderDetails.action?orderId="+order.getId()%>'><kk:msg  key="common.view"/></a></td>	
 				    							<td class="narrow-col"><a class="text-link" href='<%="RepeatOrder.action?orderId="+order.getId()%>'><kk:msg  key="common.repeat"/></a></td>	
 				    							<td class="narrow-col"><a class="text-link"><kk:msg  key="common.track"/></a></td>	
@@ -107,7 +107,7 @@
 				    							<td class="id-col">#<%=order.getId()%></td>
 				    							<td class="date-col"><%=kkEng.getDateAsString(order.getDatePurchased())%></td>
 				    							
-				    							<td class="status-col"><div class="label <%=statusClass%>"><%=order.getStatusText()%></div></td>
+				    							<td class="status-col"><div class="label <%=statusClass%>"><%=(order.getStatusText().equalsIgnoreCase("Waiting for Payment"))?"Payment Received":order.getStatusText()%></div></td>
 				    							<td class="all-orders-icons">
 					    								<a class="text-link fa fa-eye order-action" title='<%=kkEng.getMsg("common.view")%>' href='<%="ShowOrderDetails.action?orderId="+order.getId()%>'></a>
 					    								<a class="text-link fa fa-repeat order-action" title='<%=kkEng.getMsg("common.repeat")%>' href='<%="RepeatOrder.action?orderId="+order.getId()%>'></a>
