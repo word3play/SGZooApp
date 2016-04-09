@@ -118,7 +118,10 @@
 		
 			
 		<!-- ************************ KK ***************************************** -->
-		
+		<action name="Analytics" class="com.konakart.actions.AnalyticsAction">
+			<interceptor-ref name="allowCacheStack"></interceptor-ref>			
+			<result name="success" type="tiles">Analytics</result>
+		</action>
 		<action name="AboutUs" class="com.konakart.actions.AboutUsAction">
 			<interceptor-ref name="allowCacheStack"></interceptor-ref>			
 			<result name="success" type="tiles">catalog.aboutus.page</result>

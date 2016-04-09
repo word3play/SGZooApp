@@ -20,30 +20,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+    "http://www.w3.org/TR/html4/strict.dtd">
 
 <% com.konakart.al.KKAppEng kkEng = (com.konakart.al.KKAppEng) session.getAttribute("konakartKey");%>
 
- <%if (kkEng != null) {%>
- 	<tiles:useAttribute id="contentClass" name="contentClass" classname="java.lang.String" ignore="true"/>
-    <%kkEng.setContentClass(contentClass);%>
-    <% if (kkEng.getProductMgr().getCurrentCategoriesLength() == 0 && contentClass.equalsIgnoreCase("narrow")){%>
-    	<%kkEng.setContentClass("wide");%>
-    <% } %>
-    
-    <tiles:useAttribute id="defName" name="defName" classname="java.lang.String" ignore="true"/>
-    
-    <%if (kkEng.isPortlet()) {%>
-	    <%request.getSession().setAttribute("konakartKey", kkEng); %> 
-	    <% boolean dontSetContext =  kkEng.getPropertyAsBoolean("dont.set.portlet.context.path", false);%>
-	    <%if (!dontSetContext) {%>
-		    <%kkEng.setPortletContextPath(request.getContextPath());%>
-		    <input id="kk_context" type="hidden" value="<%=request.getContextPath()%>"/>
-	    <% } %>
-		<input id="kk_portlet_id" type="hidden" value="<%=request.getAttribute("PORTLET_ID")%>"/>
-		<input id="kk_sample_url" type="hidden" value="<s:url action='KK_ACTION'/>"/>	
-		<input type="hidden" value="<%=kkEng.getXsrfToken()%>" id="kk_xsrf_token"/>			
-		<div id="kk-portlet-body">		
+
+<%if (kkEng != null) {%>
+<tiles:useAttribute id="contentClass" name="contentClass" classname="java.lang.String" ignore="true"/>
+<%kkEng.setContentClass(contentClass);%>
+<% if (kkEng.getProductMgr().getCurrentCategoriesLength() == 0 && contentClass.equalsIgnoreCase("narrow")){%>
+<%kkEng.setContentClass("wide");%>
+<% } %>
+
+<tiles:useAttribute id="defName" name="defName" classname="java.lang.String" ignore="true"/>
+
+<%if (kkEng.isPortlet()) {%>
+<%request.getSession().setAttribute("konakartKey", kkEng); %> 
+<% boolean dontSetContext =  kkEng.getPropertyAsBoolean("dont.set.portlet.context.path", false);%>
+<%if (!dontSetContext) {%>
+<%kkEng.setPortletContextPath(request.getContextPath());%>
+<input id="kk_context" type="hidden" value="<%=request.getContextPath()%>"/>
+<% } %>
+<input id="kk_portlet_id" type="hidden" value="<%=request.getAttribute("PORTLET_ID")%>"/>
+<input id="kk_sample_url" type="hidden" value="<s:url action='KK_ACTION'/>"/>	
+<input type="hidden" value="<%=kkEng.getXsrfToken()%>" id="kk_xsrf_token"/>			
+<div id="kk-portlet-body">		
     <% } else { %>
 		<html>
 			<head>
