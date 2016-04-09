@@ -231,6 +231,10 @@
 		<put-attribute name="body1" value="/WEB-INF/jsp/CatalogCheckoutExternalPaymentError.jsp"/>
 	</definition>
 	<!-- Information pages -->
+        <definition name="Analytics" extends="main.layout">
+		<put-attribute name="defName" value="Analytics"/>
+		<put-attribute name="body1" value="/WEB-INF/jsp/AnalyticsReport.jsp"/>
+	</definition>
 	<definition name="catalog.aboutus.page" extends="main.layout">
 		<put-attribute name="defName" value="catalog.aboutus.page"/>
 		<put-attribute name="body1" value="/WEB-INF/jsp/AboutUsBody.jsp"/>
