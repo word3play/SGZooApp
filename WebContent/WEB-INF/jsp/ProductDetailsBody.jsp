@@ -31,7 +31,7 @@
 
 
 <%if (!kkEng.isPortlet()){%>
-	<script type="text/javascript" src="<%=kkEng.getScriptBase()%>/kk.proddetails.js"></script>	
+	<script type="text/javascript" src="/script/kk.proddetails.js"></script>	
 <% } %>
 
 <%if (prodMgr.getSelectedProduct() == null){%>

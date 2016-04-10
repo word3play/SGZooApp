@@ -3,7 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/CiYi/Desktop/SGZooApp/WebContent/WEB-INF/jsp/ProductDetailsBody.jsp</file>
+=======
+            <file>file:/C:/KonaKart/custom/kkeclipse/src/com/konakart/app/KKCustomEng.java</file>
+            <file>file:/C:/Users/Family/Desktop/WineProj/SGZooApp/WebContent/WEB-INF/jsp/ProductDetailsBody.jsp</file>
+            <file>file:/C:/KonaKart/custom/kkeclipse/resources/struts.xml</file>
+            <file>file:/C:/KonaKart/custom/kkeclipse/src/com/konakart/actions/ipn/AuthorizeNetCallbackAction.java</file>
+            <file>file:/C:/Users/Family/Desktop/WineProj/SGZooApp/WebContent/WEB-INF/jsp/AnalyticsReport.jsp</file>
+            <file>file:/C:/Users/Family/Desktop/WineProj/SGZooApp/WebContent/WEB-INF/jsp/MainLayout.jsp</file>
+>>>>>>> refs/remotes/origin/master
         </group>
     </open-files>
 </project-private>
