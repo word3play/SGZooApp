@@ -44,7 +44,16 @@
 	<%int rating = (prod.getRating()==null)?0:prod.getRating().setScale(0, java.math.BigDecimal.ROUND_HALF_UP).intValue();  %>
 	<%String ratingDecStr = (prod.getRating()==null)?"0":(prod.getRating().setScale(1, java.math.BigDecimal.ROUND_HALF_UP)).toPlainString();  %>
 	<%com.konakart.appif.ReviewSearchIf search = revMgr.getRevSearch();%>
-	
+        
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1707778546103978";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
    		<h1 id="page-title"><%=prod.getName()%></h1>
     	<div id="product-area" class="rounded-corners">
     		<div id="product-column-left">
@@ -63,7 +72,7 @@
 					<tiles:insertAttribute name="pdInclude" /> 
 				</div>
 				<div id="share-this-mobile" class="rounded-corners-bottom">
-    				<span id="share-this-label"><kk:msg  key="product.details.body.share.this"/>:</span>
+    				<span id="share-this-label"><kk:msg  key="product.details.body.share.this"/></span>
     				<!-- AddThis Button BEGIN -->
 					<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 					<a class="addthis_button_preferred_1"></a>
@@ -328,7 +337,25 @@
 					<a class="addthis_counter addthis_bubble_style"></a>
 					</div>
 					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50e1baaf57a7a27e"></script>
-					<!-- AddThis Button END -->
+				<!-- AddThis Button END -->          
+                                        
+                                <span id="share-this-label">Like this:</span>
+                                
+                                <!-- FB LIKE Button BEGIN -->
+                               <div style="top: -4px;" class="fb-like" id="fb" data-href="http://awseb-e-c-awsebloa-bnjlb4jvcyar-1200737789.ap-southeast-1.elb.amazonaws.com/welcome.action" data-layout="button_count" 
+                                     data-action="like" data-show-faces="true" data-share="false"></div>
+				<!-- FB LIKE Button END -->   
+    				
+                                <!-- Google +1 Button BEGIN -->
+                                <div class="g-plusone" data-size="medium"></div>
+                                <script type="text/javascript">
+                                    (function() {
+                                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                      po.src = 'https://apis.google.com/js/platform.js';
+                                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                    })();
+                                </script>
+				<!-- Google +1 Button END -->          
     			</div>
     			
  	    		<%title = kkEng.getMsg("product.details.body.related");%>
