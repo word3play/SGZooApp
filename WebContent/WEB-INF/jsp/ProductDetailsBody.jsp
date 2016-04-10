@@ -45,14 +45,14 @@
 	<%String ratingDecStr = (prod.getRating()==null)?"0":(prod.getRating().setScale(1, java.math.BigDecimal.ROUND_HALF_UP)).toPlainString();  %>
 	<%com.konakart.appif.ReviewSearchIf search = revMgr.getRevSearch();%>
         
-        <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1707778546103978";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1707778546103978";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
    		<h1 id="page-title"><%=prod.getName()%></h1>
     	<div id="product-area" class="rounded-corners">
@@ -342,12 +342,8 @@
                                 <span id="share-this-label">Like this:</span>
                                 
                                 <!-- FB LIKE Button BEGIN -->
-                               <div style="top: -4px;" class="fb-like" id="fb" data-href="https://www.linkedin.com/in/yanlong-gu-99a51013" data-layout="button_count" 
+                               <div style="top: -4px;" class="fb-like" id="fb" data-href="http://awseb-e-c-awsebloa-bnjlb4jvcyar-1200737789.ap-southeast-1.elb.amazonaws.com/welcome.action" data-layout="button_count" 
                                      data-action="like" data-show-faces="true" data-share="false"></div>
-                                <script type="text/javascript">
-                                    var sUrl = window.location;
-                                    document.getElementById('fb').setAttribute('href', sUrl);
-                                </script>
 				<!-- FB LIKE Button END -->   
     				
                                 <!-- Google +1 Button BEGIN -->
