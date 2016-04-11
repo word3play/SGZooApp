@@ -56,17 +56,21 @@ $(function() {
 						<input type="hidden" name="wishListId" id="wishListId" class="wishListId" value="-1" />
 						<input type="hidden" id="gallery_nav_base" value="<%=kkEng.getImageBase()%>" type="hidden"/>								
 						<input type="hidden" id="gallery_nav_uuid" value="<%=prod.getUuid()%>" type="hidden"/>	
-						<%if (prod.getImages() != null && prod.getImages().getImgNames() != null && prod.getImages().getImgNames().length > 0) {%>	
-							<%StringBuffer names = new StringBuffer();%>						
-						    <%for (int i = 0; i < prod.getImages().getImgNames().length; i++){%>
-								<%String name = prod.getImages().getImgNames()[i]; %>
-							    <%if (i>0){%>
-					                <%names.append(",");%>
-					        	<%}%>
-					        	<%names.append(name); %>
-							<%}%>
+                                                
+<!--						<%//if (prod.getImages() != null && prod.getImages().getImgNames() != null && prod.getImages().getImgNames().length > 0) {%>	
+							<%//StringBuffer names = new StringBuffer(); %>						
+						    <%//for (int i = 0; i < prod.getImages().getImgNames().length; i++){%>
+								<%//String name = prod.getImages().getImgNames()[i]; %>
+							    <%//if (i>0){%>
+					                <%//names.append(",");%>
+					        	<%//}%>
+					        	<%//names.append(name); %>
+							<%//}%>
+-->
+
+                                                        <%String names = prod.getImage();%>
 							<input type="hidden" id="gallery_img_names" value="<%=names%>" type="hidden"/>	
-						<%}%>
+						<%//}%>
 													
 						<div id="product-price">
 							<%java.math.BigDecimal saving = null;%>

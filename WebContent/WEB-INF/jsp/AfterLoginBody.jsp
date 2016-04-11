@@ -115,7 +115,7 @@
 					    							<td>#<%=order.getId()%></td>
 					    							<td><%=kkEng.getDateAsString(order.getDatePurchased())%></td>
 					    							<td><kk:msg  key="common.total"/>: <%=kkEng.formatPrice(order.getTotalIncTax(),order.getCurrencyCode())%></td>
-					    							<td><div class="label <%=statusClass%>"><%=order.getStatusText()%></div></td>
+					    							<td><div class="label <%=statusClass%>"><%=(order.getStatusText().equalsIgnoreCase("Waiting for Payment"))?"Payment Received":order.getStatusText()%></div></td>
 					    							<td class="last-order-icons">
 					    								<a class="text-link fa fa-eye order-action" title='<%=kkEng.getMsg("common.view")%>' href='<%="ShowOrderDetails.action?orderId="+order.getId()%>'></a>
 					    								<a class="text-link fa fa-repeat order-action" title='<%=kkEng.getMsg("common.repeat")%>' href='<%="RepeatOrder.action?orderId="+order.getId()%>'></a>
