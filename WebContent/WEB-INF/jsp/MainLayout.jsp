@@ -58,7 +58,7 @@
 				<link type="text/css" rel="stylesheet" href="/styles/font-awesome/css/font-awesome.css" />
 				<link type='text/css' rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700'  >		
 				<link type="text/css" rel="stylesheet" href="/styles/jcarousel.css" />				
-				<link type="text/css" rel="stylesheet" href="/styles/kk-style.css" />
+				<link type="text/css" rel="stylesheet" href="https://s3-ap-southeast-1.amazonaws.com/winexpress16/styles/kk-style.css" />
 
 		 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 				<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>				

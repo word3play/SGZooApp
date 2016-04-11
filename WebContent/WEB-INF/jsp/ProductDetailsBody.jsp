@@ -31,7 +31,7 @@
 
 
 <%if (!kkEng.isPortlet()){%>
-	<script type="text/javascript" src="/script/kk.proddetails.js"></script>	
+	<script type="text/javascript" src="https://s3-ap-southeast-1.amazonaws.com/winexpress16/script/kk.proddetails.js"></script>	
 <% } %>
 
 <%if (prodMgr.getSelectedProduct() == null){%>
